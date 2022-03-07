@@ -41,7 +41,7 @@ const BUNDLE_PACKAGE_PROVIDERS = {
 };
 
 // List of available static packages
-const STATIC_PACKAGE_PROVIDERS = [SettingsApp, DiscussionsApp, CustomBundle];
+const STATIC_PACKAGE_PROVIDERS = [SettingsApp, DiscussionsApp];
 
 // Determine the correct AppProvider based on the kapp/route
 const getAppProvider = ({ kapp, pathname }) => {
