@@ -7,10 +7,10 @@ import { history } from '@kineticdata/react';
 import reducers from './reducers';
 import sagas from './sagas';
 
-console.log('Configuring portal package redux store');
+console.log('Configuring customBundle package redux store');
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-  ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ name: 'PORTAL' })
+  ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ name: 'customBundle' })
   : compose;
 
 const sagaMiddlware = createSagaMiddleware();
