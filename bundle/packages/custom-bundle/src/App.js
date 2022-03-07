@@ -7,6 +7,7 @@ const DummyHome = props => (
   <div className="container">
     <h1>Welcome to the Portal!</h1>
     <p>This is the home page.</p>
+    <h2>HELLO WORLD</h2>
   </div>
 );
 

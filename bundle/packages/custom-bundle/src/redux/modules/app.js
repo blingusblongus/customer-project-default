@@ -13,7 +13,7 @@ export const reducer = (state = {}, action) => {
   // required state from the app package and is ready
   if (
     newState.space &&
-    newState.kapp &&
+    // newState.kapp &&
     (newState.profile || newState.authenticated === false) &&
     newState.layoutSize
   ) {
