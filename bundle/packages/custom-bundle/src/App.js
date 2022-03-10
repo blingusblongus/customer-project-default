@@ -2,14 +2,14 @@ import React from 'react';
 import { Router, Redirect } from '@reach/router';
 import { compose, lifecycle } from 'recompose';
 import { connect } from './redux/store';
-import { Kapp, KappComponent } from '../../app/src/components/Kapp';
-import { KappForm } from '@kineticdata/react';
+import Test from './components/Test/Test';
+import { KineticLib } from '@kineticdata/react';
 
 const DummyHome = props => (
   <div className="container">
     <h1>Welcome to the Portal!</h1>
     <p>This is the home page.</p>
-    <Kapp />
+    <Test />
   </div>
 );
 
@@ -35,11 +35,13 @@ export const AppComponent = props => {
       </Router>
     ),
     main: (
-      <div className="package-layout package-layout--portal">
-        <Router>
-          <DummyHome path="/" />
-        </Router>
-      </div>
+      <KineticLib clientId={'kinetic-bundle-dev'}>
+        <div className="package-layout package-layout--portal">
+          <Router>
+            <DummyHome path="/" />
+          </Router>
+        </div>
+      </KineticLib>
     ),
   });
 };
