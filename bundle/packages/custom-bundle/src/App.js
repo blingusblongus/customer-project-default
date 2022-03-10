@@ -2,11 +2,14 @@ import React from 'react';
 import { Router, Redirect } from '@reach/router';
 import { compose, lifecycle } from 'recompose';
 import { connect } from './redux/store';
+import { Kapp, KappComponent } from '../../app/src/components/Kapp';
+import { KappForm } from '@kineticdata/react';
 
 const DummyHome = props => (
   <div className="container">
     <h1>Welcome to the Portal!</h1>
     <p>This is the home page.</p>
+    <Kapp />
   </div>
 );
 
