@@ -2,14 +2,20 @@ import React, { useEffect } from 'react';
 import { compose, lifecycle } from 'recompose';
 import { connect } from '../redux/store';
 import { fetchKapp } from '@kineticdata/react';
+import { useSelector, useStore } from 'react-redux';
 
-const HomeComponent = props => {
+export const HomeComponent = props => {
   console.log('scaffold loaded');
+  // const data = useSelector(store=>store)
+  // const st = useStore()
+  // console.log(st)
+  console.log(props);
 
   useEffect(() => {
     console.log('scaffold mounted');
+    // console.log(data);
     const getKapp = async () => {
-      let response = await fetchKapp({ kappSlug: 'nick-sandbox' });
+      let response = await fetchKapp({ kappSlug: 'sandbox' });
       console.log(response);
     };
 
