@@ -2,9 +2,13 @@ import React, { useEffect } from 'react';
 import { compose, lifecycle } from 'recompose';
 import { connect } from '../redux/store';
 import { fetchKapp } from '@kineticdata/react';
-import { useSelector, useStore } from 'react-redux';
+import { createSelectorHook, createStoreHook } from 'react-redux';
+import { context } from '../redux/store';
 
 export const HomeComponent = props => {
+  const useSelector = createSelectorHook(context);
+  const data = useSelector(store => store);
+  console.log(data);
   console.log('scaffold loaded');
   // const data = useSelector(store=>store)
   // const st = useStore()
