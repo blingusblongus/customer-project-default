@@ -23,6 +23,7 @@ import SettingsApp from '@kineticdata/bundle-settings';
 import SurveyApp from '@kineticdata/bundle-survey';
 
 import CustomBundle from 'custom-bundle';
+import Scaffold from 'scaffold';
 
 /**
  * The git repo name to be used for fetching deployed versions of this bundle.
@@ -38,6 +39,7 @@ const BUNDLE_PACKAGE_PROVIDERS = {
   'tech-bar': TechBarApp,
   survey: SurveyApp,
   'custom-bundle': CustomBundle,
+  scaffold: Scaffold,
 };
 
 // List of available static packages

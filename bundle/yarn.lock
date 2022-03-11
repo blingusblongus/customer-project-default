@@ -1460,7 +1460,7 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@kineticdata/bundle-common@5.1.0":
+"@kineticdata/bundle-common@5.1.0", "@kineticdata/bundle-common@^5.0.14":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@kineticdata/bundle-common/-/bundle-common-5.1.0.tgz#e2493d7fc14e98e37d413b83a5a0bd8ea3f1dff8"
   integrity sha512-Ziw01B12kAaWPj5XIeotIVtQ9V0SEcf2Y6qYsoXgPhJR0HJtziBzJjd01gazKkkVylwuYeURosaLv4t1H6CcoA==
@@ -1697,7 +1697,7 @@
     rudy-match-path "^0.3.0"
     victory "^31.2.0"
 
-"@kineticdata/react@5.1.0":
+"@kineticdata/react@5.1.0", "@kineticdata/react@^5.0.14":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@kineticdata/react/-/react-5.1.0.tgz#6bba5d74579ae16e3dc0b0bf4d9cce0514b26892"
   integrity sha512-WApIP/fHkYXsFuKhJoHWB//bfhk7g/uhKwMPzARa308NkjTPJhT/HFAC22NNzaQYOCbxjmjSdZRiugvPz9Q7cw==
