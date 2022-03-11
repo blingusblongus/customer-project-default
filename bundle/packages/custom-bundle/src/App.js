@@ -3,7 +3,6 @@ import { Router, Redirect } from '@reach/router';
 import { compose, lifecycle } from 'recompose';
 import { connect } from './redux/store';
 import Test from './components/Test/Test';
-import { KineticLib } from '@kineticdata/react';
 
 const DummyHome = props => (
   <div className="container">
@@ -35,13 +34,11 @@ export const AppComponent = props => {
       </Router>
     ),
     main: (
-      <KineticLib clientId={'kinetic-bundle-dev'}>
-        <div className="package-layout package-layout--portal">
-          <Router>
-            <DummyHome path="/" />
-          </Router>
-        </div>
-      </KineticLib>
+      <div className="package-layout package-layout--portal">
+        <Router>
+          <DummyHome path="/" />
+        </Router>
+      </div>
     ),
   });
 };

@@ -5,6 +5,7 @@ const Test = () => {
   useEffect(() => {
     console.log('test component mounted');
     console.log('testing fetchKapp');
+    console.log(fetchKapp);
     fetchKapp({ kappSlug: 'nick-sandbox' })
       .then(({ kapp }) => {
         console.log('Then Block');
