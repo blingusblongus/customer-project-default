@@ -7,11 +7,9 @@ import {
   PageTitle,
 } from '@kineticdata/bundle-common';
 import { connect } from './redux/store';
-import { Provider } from 'react-redux';
 
 import { Home } from './components/Home';
 import { I18n } from '@kineticdata/react';
-import { store, context } from './redux/store';
 
 /*****************************************************************************
  *** PRIVATE APP

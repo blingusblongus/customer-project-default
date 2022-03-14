@@ -11,7 +11,6 @@ export const HomeComponent = props => {
   console.log(data);
   console.log('scaffold loaded');
   // const data = useSelector(store=>store)
-  // const st = useStore()
   // console.log(st)
   console.log(props);
 
