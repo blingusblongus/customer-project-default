@@ -12,7 +12,7 @@ const FormsContainer = () => {
           <div>
             {forms?.map((form, i) => {
               return (
-                <p key={i}>
+                <p style={styles.p} key={i}>
                   {form.name}: {form.description}
                 </p>
               );
@@ -22,6 +22,14 @@ const FormsContainer = () => {
       )}
     </>
   );
+};
+
+const styles = {
+  p: {
+    fontSize: 14,
+    color: 'blue',
+    textAlign: 'left',
+  },
 };
 
 export default FormsContainer;
