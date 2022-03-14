@@ -6,8 +6,12 @@
     "lint": "eslint src --ext .js"
   },
   "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
     "@kineticdata/bundle-common": "^5.0.14",
     "@kineticdata/react": "^5.0.14",
+    "@mui/icons-material": "^5.5.0",
+    "@mui/material": "^5.5.0",
     "@reach/router": "git://github.com/kineticdata/router.git",
     "classnames": "^2.2.5",
     "immutable": "4.0.0-rc.9",

@@ -2,17 +2,18 @@ import React, { useEffect } from 'react';
 import { compose, lifecycle } from 'recompose';
 import { connect } from '../redux/store';
 import { fetchKapp } from '@kineticdata/react';
-import { createSelectorHook, createStoreHook } from 'react-redux';
+import { createSelectorHook } from 'react-redux';
 import { context } from '../redux/store';
+import KappAccordion from './KappAccordion/KappAccordion';
 
 export const HomeComponent = props => {
   const useSelector = createSelectorHook(context);
-  const data = useSelector(store => store);
-  console.log(data);
-  console.log('scaffold loaded');
-  // const data = useSelector(store=>store)
-  // console.log(st)
-  console.log(props);
+  const kapps = useSelector(store => store.app.kapps);
+  // console.log(data);
+  // console.log('scaffold loaded');
+  // // const data = useSelector(store=>store)
+  // // console.log(st)
+  // console.log(props);
 
   useEffect(() => {
     console.log('scaffold mounted');
@@ -31,6 +32,7 @@ export const HomeComponent = props => {
         <div className="p-5 text-center">
           <h1>Welcome to the Scaffold Package!</h1>
           <p>This is the home page.</p>
+          <KappAccordion kapps={kapps} />
         </div>
       </div>
     </div>
