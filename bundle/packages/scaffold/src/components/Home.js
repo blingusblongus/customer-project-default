@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { compose, lifecycle } from 'recompose';
 import { connect } from '../redux/store';
-import { fetchKapp } from '@kineticdata/react';
+// import { fetchKapp } from '@kineticdata/react';
 import { createSelectorHook } from 'react-redux';
 import { context } from '../redux/store';
 import KappAccordion from './KappAccordion/KappAccordion';
@@ -9,22 +9,15 @@ import KappAccordion from './KappAccordion/KappAccordion';
 export const HomeComponent = props => {
   const useSelector = createSelectorHook(context);
   const kapps = useSelector(store => store.app.kapps);
-  // console.log(data);
-  // console.log('scaffold loaded');
-  // // const data = useSelector(store=>store)
-  // // console.log(st)
-  // console.log(props);
 
-  useEffect(() => {
-    console.log('scaffold mounted');
-    // console.log(data);
-    const getKapp = async () => {
-      let response = await fetchKapp({ kappSlug: 'sandbox' });
-      console.log(response);
-    };
-
-    getKapp();
-  }, []);
+  // Testing KineticLib util
+  // useEffect(() => {
+  //   const getKapp = async () => {
+  //     let response = await fetchKapp({ kappSlug: 'sandbox' });
+  //     console.log(response);
+  //   };
+  //   getKapp();
+  // }, []);
 
   return (
     <div className="page-container">
