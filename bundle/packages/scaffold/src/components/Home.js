@@ -7,12 +7,6 @@ import FormsContainer from './FormsContainer/FormsContainer';
 
 export const HomeComponent = props => {
   const kapps = useSelector(store => store.app.kapps);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    console.log('fetch form on load');
-    dispatch({ type: 'FETCH_FORMS', payload: 'nick-sandbox' });
-  });
 
   return (
     <div className="page-container">

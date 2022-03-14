@@ -25,22 +25,20 @@ export default function KappAccordion({ kapps }) {
             </AccordionSummary>
             <AccordionDetails>
               {kapp.attributes.length > 0 ? (
-                <ol>
+                <ul>
                   {kapp.attributes?.map((attr, i) => {
                     return (
                       <Typography key={i}>
-                        <li>
+                        <li style={styles.formList}>
                           {attr.name}: {attr.values[0]}
                         </li>
                       </Typography>
                     );
                   })}
-                </ol>
+                </ul>
               ) : (
                 <Typography>No Attributes</Typography>
               )}
-
-              <p>{kapp.slug}</p>
 
               <Button
                 onClick={() =>
@@ -59,3 +57,9 @@ export default function KappAccordion({ kapps }) {
     </div>
   );
 }
+
+const styles = {
+  formList: {
+    textAlign: 'left',
+  },
+};

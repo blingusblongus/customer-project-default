@@ -27,8 +27,7 @@ const FormsContainer = () => {
 const styles = {
   p: {
     fontSize: 14,
-    color: 'blue',
-    textAlign: 'left',
+    textAlign: 'center',
   },
 };
 
