@@ -3,6 +3,7 @@ import { compose, lifecycle } from 'recompose';
 import { connect } from '../redux/store';
 import KappAccordion from './KappAccordion/KappAccordion';
 import { useSelector, useDispatch } from '../redux/hooks/hooks';
+import FormsContainer from './FormsContainer/FormsContainer';
 
 export const HomeComponent = props => {
   const kapps = useSelector(store => store.app.kapps);
@@ -19,6 +20,7 @@ export const HomeComponent = props => {
         <div className="p-5 text-center">
           <h1>Welcome to the Scaffold Package!</h1>
           <p>This is the home page.</p>
+          <FormsContainer />
           <KappAccordion kapps={kapps} />
         </div>
       </div>

@@ -4,9 +4,13 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Button from '@mui/material/Button';
+import { useDispatch } from '../../redux/hooks/hooks';
 
 export default function KappAccordion({ kapps }) {
+  const dispatch = useDispatch();
   console.log(kapps);
+
   return (
     <div>
       {kapps?.map((kapp, i) => {
@@ -35,6 +39,19 @@ export default function KappAccordion({ kapps }) {
               ) : (
                 <Typography>No Attributes</Typography>
               )}
+
+              <p>{kapp.slug}</p>
+
+              <Button
+                onClick={() =>
+                  dispatch({
+                    type: 'FETCH_FORMS',
+                    payload: kapp.slug,
+                  })
+                }
+              >
+                Get Forms
+              </Button>
             </AccordionDetails>
           </Accordion>
         );
