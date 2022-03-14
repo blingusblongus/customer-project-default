@@ -20,21 +20,21 @@ export default function KappAccordion({ kapps }) {
               <Typography>{kapp.name}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>
-                {kapp.attributes.length > 0 ? (
-                  <ol>
-                    {kapp.attributes?.map((attr, i) => {
-                      return (
-                        <li key={i}>
+              {kapp.attributes.length > 0 ? (
+                <ol>
+                  {kapp.attributes?.map((attr, i) => {
+                    return (
+                      <Typography key={i}>
+                        <li>
                           {attr.name}: {attr.values[0]}
                         </li>
-                      );
-                    })}
-                  </ol>
-                ) : (
-                  <div>No Attributes</div>
-                )}
-              </Typography>
+                      </Typography>
+                    );
+                  })}
+                </ol>
+              ) : (
+                <Typography>No Attributes</Typography>
+              )}
             </AccordionDetails>
           </Accordion>
         );
