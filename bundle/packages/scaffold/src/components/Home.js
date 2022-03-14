@@ -1,28 +1,17 @@
 import React, { useEffect } from 'react';
 import { compose, lifecycle } from 'recompose';
 import { connect } from '../redux/store';
-// import { fetchKapp } from '@kineticdata/react';
-import { createDispatchHook, createSelectorHook } from 'react-redux';
-import { context } from '../redux/store';
 import KappAccordion from './KappAccordion/KappAccordion';
+import { useSelector, useDispatch } from '../redux/hooks/hooks';
 
 export const HomeComponent = props => {
-  const useSelector = createSelectorHook(context);
   const kapps = useSelector(store => store.app.kapps);
-  const dispatch = createDispatchHook(context)();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     console.log('fetch form on load');
-    dispatch({ type: 'FETCH_FORM', payload: 'Hello' });
+    dispatch({ type: 'FETCH_FORMS', payload: 'nick-sandbox' });
   });
-  // Testing KineticLib util
-  // useEffect(() => {
-  //   const getKapp = async () => {
-  //     let response = await fetchKapp({ kappSlug: 'sandbox' });
-  //     console.log(response);
-  //   };
-  //   getKapp();
-  // }, []);
 
   return (
     <div className="page-container">
